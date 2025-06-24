@@ -26,9 +26,9 @@ app.use(limiter);
 app.use("/api/auth", routes.auth);
 app.use("/api/summaries", routes.summaries);
 app.use("/api/admin", routes.admin);
-// app.get("/", (req, res) => {
-//   res.send("Welcome to the API");
-// });
+app.get("/", (req, res) => {
+  res.send("Welcome to the API");
+});
 
 // Error handler
 app.use(errorHandler);
